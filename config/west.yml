@@ -8,5 +8,6 @@ manifest:
     - name: zmk
       remote: zmkfirmware
       revision: main
-      # This points to a west manifest file in the remote module for further imports
       import: app/west.yml
+  self:
+    path: config
