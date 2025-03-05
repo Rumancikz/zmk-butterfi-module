@@ -55,7 +55,7 @@
      &kp Q       &kp W        &kp F      &kp P       &kp B &kp J     &kp L       &kp U      &kp Y      &kp BSPC 
      &hm ESC A   &hm LGUI R   &hm LALT S &hm LCTRL T &kp G &kp M     &hm LCTRL N &hm LALT E &hm LGUI I &hm ESC O
      &mt LCTRL Z &kp X        &kp C      &kp D       &kp V &kp K     &kp H       &kp COMMA  &kp DOT    &kp FSLH 
-                        &lsoh 3 TAB  &kp LSHIFT &mo 1       &mo 2 &kp SPACE &kp RET
+                 &lsoh 3 TAB  &kp LSHIFT &mo 1       &mo 2 &kp SPACE &kp RET
                         >;
                 };
                 lower_layer {
@@ -63,7 +63,7 @@
      &kp GRAVE   &trans        &kp TILDE &kp CARET       &trans    &kp PG_UP &kp HOME   &kp UP   &kp END    &kp DEL      
      &kp APOS    &kp LC(LALT)  &kp LC(Z) &kp KP_MULTIPLY &kp LC(S) &kp PG_DN &kp LEFT   &kp DOWN &kp RIGHT  &kp SEMI     
      &mt LCTRL Z &trans        &trans    &kp EQUAL       &trans    &kp ESC   &kp K_PREV &kp C_PP &kp K_NEXT &kp C_MUTE   
-                                      &kp TAB   &kp LSHIFT      &mo 1     &mo 2     &kp SPACE  &kp RET
+                               &kp TAB   &kp LSHIFT      &mo 1     &mo 2     &kp SPACE  &kp RET
                         >;
                 };
                 raise_layer {
@@ -71,7 +71,7 @@
    &kp EXCL  &kp LPAR &kp RPAR &kp KP_MULTIPLY &kp PLUS  &kp AMPS  &kp N7 &kp N8 &kp N9 &kp EQUAL
    &kp PIPE  &kp LBKT &kp RBKT &kp DLLR        &kp AT    &kp PRCNT &kp N4 &kp N5 &kp N6 &kp APOS 
    &kp BSLH  &kp LBRC &kp RBRC &kp MINUS       &kp UNDER &kp HASH  &kp N1 &kp N2 &kp N3 &kp N0   
-                    	     &kp TAB  &kp LSHIFT      &mo 1     &mo 2     &kp SPACE  &kp RET
+                      &kp TAB  &kp LSHIFT      &mo 1     &mo 2     &kp SPACE  &kp RET
                         >;
                 };
                                 alt_layer {
@@ -79,7 +79,7 @@
    &bt BT_CLR          &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &trans &trans &trans       &kp LA(UP)       &trans        &kp COLON
    &kp LS(LC(LG(W)))   &kp LG(PG_DN)   &kp LG(PG_UP)   &kp LWIN        &trans &trans &kp LA(LEFT) &kp LA(DOWN)     &kp LA(RIGHT) &kp APOS 
    &kp LC(LA(L))       &kp LC(LA(X))   &kp LALT        &kp LC(LA(DEL)) &trans &trans &trans       &kp LC(LA(DOWN)) &trans        &trans   
-                              &trans          &trans          &trans          &trans &trans &trans
+                       &trans          &trans          &trans          &trans &trans &trans
                                         >;
                                 };
         };
