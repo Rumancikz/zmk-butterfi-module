@@ -1,0 +1,90 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+/ {
+    behaviors {
+
+        shiftz: shift_z {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SHIFT_Z";
+            #binding-cells = <0>;
+            bindings = <&kp LSHIFT>, <&kp Z>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        layer1alt: layer_1_alt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LAYER_1_ALT";
+            #binding-cells = <0>;
+            bindings = <&mo 1>, <&kp LALT>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        lsoh: layer_shift_on_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_SHIFT_ON_HOLD";
+            tapping-term-ms = <150>;
+            flavor = "hold-preferred";
+            #binding-cells = <2>;
+            bindings = <&mo>, <&kp>;
+        };
+
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
+    };
+
+        keymap {
+                compatible = "zmk,keymap";
+
+                default_layer {
+                        bindings = <
+     &kp Q       &kp W        &kp F      &kp P       &kp B &kp J     &kp L       &kp U      &kp Y      &kp BSPC 
+     &hm ESC A   &hm LGUI R   &hm LALT S &hm LCTRL T &kp G &kp M     &hm LCTRL N &hm LALT E &hm LGUI I &hm ESC O
+     &mt LCTRL Z &kp X        &kp C      &kp D       &kp V &kp K     &kp H       &kp COMMA  &kp DOT    &kp FSLH 
+                        &lsoh 3 TAB  &kp LSHIFT &mo 1       &mo 2 &kp SPACE &kp RET
+                        >;
+                };
+                lower_layer {
+                        bindings = <
+     &kp GRAVE   &trans        &kp TILDE &kp CARET       &trans    &kp PG_UP &kp HOME   &kp UP   &kp END    &kp DEL      
+     &kp APOS    &kp LC(LALT)  &kp LC(Z) &kp KP_MULTIPLY &kp LC(S) &kp PG_DN &kp LEFT   &kp DOWN &kp RIGHT  &kp SEMI     
+     &mt LCTRL Z &trans        &trans    &kp EQUAL       &trans    &kp ESC   &kp K_PREV &kp C_PP &kp K_NEXT &kp C_MUTE   
+                                      &kp TAB   &kp LSHIFT      &mo 1     &mo 2     &kp SPACE  &kp RET
+                        >;
+                };
+                raise_layer {
+                        bindings = <
+   &kp EXCL  &kp LPAR &kp RPAR &kp KP_MULTIPLY &kp PLUS  &kp AMPS  &kp N7 &kp N8 &kp N9 &kp EQUAL
+   &kp PIPE  &kp LBKT &kp RBKT &kp DLLR        &kp AT    &kp PRCNT &kp N4 &kp N5 &kp N6 &kp APOS 
+   &kp BSLH  &kp LBRC &kp RBRC &kp MINUS       &kp UNDER &kp HASH  &kp N1 &kp N2 &kp N3 &kp N0   
+                    	     &kp TAB  &kp LSHIFT      &mo 1     &mo 2     &kp SPACE  &kp RET
+                        >;
+                };
+                                alt_layer {
+                        bindings = <
+   &bt BT_CLR          &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &trans &trans &trans       &kp LA(UP)       &trans        &kp COLON
+   &kp LS(LC(LG(W)))   &kp LG(PG_DN)   &kp LG(PG_UP)   &kp LWIN        &trans &trans &kp LA(LEFT) &kp LA(DOWN)     &kp LA(RIGHT) &kp APOS 
+   &kp LC(LA(L))       &kp LC(LA(X))   &kp LALT        &kp LC(LA(DEL)) &trans &trans &trans       &kp LC(LA(DOWN)) &trans        &trans   
+                              &trans          &trans          &trans          &trans &trans &trans
+                                        >;
+                                };
+        };
+};
+/*
+                empty_layer {
+                        bindings = <
+     &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans
+     &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans
+     &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans
+                   &trans &trans &trans   &trans &trans &trans
+                        >;
+                };
+*/

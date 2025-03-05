@@ -1,0 +1,5 @@
+config SHIELD_BUTTERFI_LEFT
+    def_bool $(shields_list_contains,butterfi_left)
+
+config SHIELD_BUTTERFI_RIGHT
+    def_bool $(shields_list_contains,butterfi_right)
