@@ -4,7 +4,6 @@ name: butterfi
 type: shield
 features:
   - keys
-  - display
 siblings:
   - butterfi_left
-  - butterfi_rightr
+  - butterfi_right
