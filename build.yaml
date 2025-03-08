@@ -1,7 +1,7 @@
 include:
   - board: nice_nano_v2
-    shield: butterfi_left nice_view_ccc nice_view_adapter
+    shield: butterfi_left nice_view_adapter nice_view_ccc
   - board: nice_nano_v2
-    shield: butterfi_right nice_view_ccc nice_view_adapter
+    shield: butterfi_right nice_view_adapter nice_view_ccc
   - board: nice_nano_v2
     shield: settings_reset
