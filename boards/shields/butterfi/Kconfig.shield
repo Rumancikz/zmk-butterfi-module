@@ -3,3 +3,6 @@ config SHIELD_BUTTERFI_LEFT
 
 config SHIELD_BUTTERFI_RIGHT
     def_bool $(shields_list_contains,butterfi_right)
+
+config SHIELD_NICE_VIEW_CCC
+    def_bool $(shields_list_contains,nice_view_ccc)
